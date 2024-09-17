@@ -11,7 +11,6 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      // Send all fields: name, email, and password
       const response = await axios.post(`http://localhost:5000/api/auth/register`, { name, email, password });
       setSuccess('User registered successfully');
       setError('');

@@ -4,7 +4,7 @@ import axios from 'axios';
 import './PostDetail.css';
 
 function PostDetail() {
-  const { id } = useParams(); // Get the post ID from the URL
+  const { id } = useParams(); 
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState('');

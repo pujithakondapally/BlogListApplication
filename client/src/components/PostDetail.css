@@ -1,4 +1,3 @@
-/* Container for the post detail view */
 .post-detail-container {
   max-width: 800px;
   margin: 2rem auto;
@@ -8,7 +7,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Post title styling */
 .post-detail-container h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -16,7 +14,6 @@
   font-weight: 700;
 }
 
-/* Post content styling */
 .post-detail-container p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -25,7 +22,6 @@
   white-space: pre-wrap; 
 }
 
-/* Comments section title */
 .post-detail-container h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -33,7 +29,6 @@
   font-weight: 600;
 }
 
-/* Styling for individual comments */
 .comments-section p {
   background-color: #fff;
   padding: 1rem;
@@ -42,7 +37,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Comment textarea styling */
 .post-detail-container textarea {
   width: 100%;
   padding: 1rem;
@@ -54,7 +48,6 @@
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Submit comment button styling */
 .post-detail-container button {
   display: inline-block;
   margin-top: 1rem;
@@ -69,12 +62,10 @@
   transition: background-color 0.3s ease;
 }
 
-/* Submit comment button hover effect */
 .post-detail-container button:hover {
   background-color: #0056b3;
 }
 
-/* Add some margin to the last element to avoid tight spacing */
 .post-detail-container .comments-section p:last-child {
   margin-bottom: 0;
 }

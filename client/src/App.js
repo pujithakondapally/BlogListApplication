@@ -8,6 +8,7 @@ import PostForm from './components/PostForm';
 import PostList from './components/PostList';
 import PostDetail from './components/PostDetail';
 import PrivateRoute from './components/PrivateRoute';
+import Profile from './components/Profile';
 
 function App() {
   return (

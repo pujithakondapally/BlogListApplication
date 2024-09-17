@@ -1,36 +1,30 @@
-/* Container to control scrolling */
 .post-list-container {
-  max-height: 80vh; /* Adjust this value if needed */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding-right: 15px; /* Prevent content from hiding behind the scrollbar */
+  max-height: 80vh; 
+  overflow-y: auto; 
+  padding-right: 15px; 
   margin-bottom: 20px;
 }
 
-/* Centering search bar container */
 .search-bar-container {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-/* Styling the search bar */
 .search-bar {
   position: relative;
-  width: 50%; /* Increase the width of the search bar */
+  width: 50%; 
 }
 
-/* Input styling */
 .search-bar input {
   width: 100%;
-  padding: 10px 40px 10px 20px; /* Increase padding for larger input area */
+  padding: 10px 40px 10px 20px; 
   border-radius: 20px;
   border: 1px solid #ddd;
   font-size: 1.1rem;
   margin-top: 10px;
 }
 
-/* Search icon styling */
-/* Search icon styling */
 .search-icon {
   position: absolute;
   right: 15px;
@@ -43,15 +37,12 @@
   background-repeat: no-repeat;
 }
 
-
-/* Post list styling with flexbox */
 .post-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Styling individual post cards */
 .post-card {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -59,24 +50,20 @@
   background-color: #fff;
 }
 
-/* Post title styling */
 .post-card h2 {
   margin: 0;
   font-size: 1.5rem;
 }
 
-/* Post content preview styling */
 .post-card p {
   margin: 0.5rem 0;
 }
 
-/* Link styling */
 .post-card a {
   color: #007bff;
   text-decoration: none;
 }
 
-/* Link hover effect */
 .post-card a:hover {
   text-decoration: underline;
 }

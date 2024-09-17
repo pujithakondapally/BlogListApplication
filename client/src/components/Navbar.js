@@ -1,19 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Link, NavLink , useNavigate} from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import {jwtDecode} from "jwt-decode"; 
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentImg, setCurrentImg] = useState({
     src: "https://res.cloudinary.com/duwadnxwf/image/upload/v1704953273/icons8-hamburger-50_2_c837d6.png",
   });
-
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem('token');
+    setUser(null);
     navigate('/login');
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      const decodedToken = jwtDecode(token);
+      setUser(decodedToken);
+    }
+  }, []);
 
   const token = localStorage.getItem('token');
 
@@ -26,6 +36,7 @@ export const Navbar = () => {
           : "https://res.cloudinary.com/duwadnxwf/image/upload/v1704953273/icons8-hamburger-50_2_c837d6.png",
     }));
   };
+
   return (
     <nav>
       <Link to="/" className="title">
@@ -37,7 +48,7 @@ export const Navbar = () => {
           alt="ham"
           className="ham"
           onClick={handleClick}
-        ></img>
+        />
       </div>
       <ul className={menuOpen ? "open" : ""}>
         {!token && (
@@ -53,14 +64,14 @@ export const Navbar = () => {
         <li>
           <NavLink to="/postList">Posts</NavLink>
         </li>
-
         <li>
-          <NavLink to="/New-Post"> New Posts</NavLink>
+          <NavLink to="/new-post">New Post</NavLink>
         </li>
-
-        <li>
-          <button onClick={handleLogout} className="logout-button">Logout</button>
-        </li>
+        {token && (
+            <li>
+              <button onClick={handleLogout} className="logout-button">Logout</button>
+            </li>
+        )}
       </ul>
     </nav>
   );
