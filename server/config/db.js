@@ -1,12 +1,15 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+
+const uri = process.env.MONGODB_URI;
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/bloglist', {
+    await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log('MongoDB connected');
+    console.log('MongoDB connected to Atlas');
   } catch (error) {
     console.error('MongoDB connection error:', error);
     process.exit(1);
