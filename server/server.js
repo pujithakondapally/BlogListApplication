@@ -10,7 +10,7 @@ const User = require('./models/User');
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:3000' })); 
+app.use(cors()); 
 
 const connectDB = require('./config/db');
 connectDB();
