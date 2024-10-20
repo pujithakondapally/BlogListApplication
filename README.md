@@ -31,10 +31,17 @@ A full-stack blogging platform built using the MERN (MongoDB, Express, React, No
 
 - **`/posts/:id`**
   - **Description**: View specific post details, including comments. Allows users to read a detailed view of a post and see any comments associated with it.
-
-
+  
 ### Private Endpoints
 
 - **`/new-post`**
   - **Description**: Create a new blog post. Allows logged-in users to author and publish new posts.
+
+## Deployment
+
+The frontend is deployed on **Netlify** for a seamless user experience, while the backend is hosted on **Render** to ensure scalable and reliable performance.
+
+[Frontend Deployment Link](https://meek-kashata-75a592.netlify.app/) | [Backend Deployment Link](https://bloglistapplication-1.onrender.com)
+
+
 
